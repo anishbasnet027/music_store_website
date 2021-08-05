@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Elements-->
+<!ELEMENT music_shop (shop_detail,songs,footer)>   <!-- Parent Element  | and its child elements are inside bracket-->
+<!ELEMENT shop_detail (store_name,address,address_country,telephone_number,website,logo,Quote)> 
+<!ELEMENT store_name (#PCDATA)>  <!-- #PCDATA means it can have text data -->
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT address_country (#PCDATA)>
+<!ELEMENT telephone_number (#PCDATA)>
+<!ELEMENT website (#PCDATA)>
+<!ELEMENT logo EMPTY>  <!-- It is empty element , it stores the logo image-->
+<!ELEMENT Quote (#PCDATA)>
+<!ELEMENT songs (genre_title,Genre+)>   <!-- The Genre element can occur multiple times-->
+<!ELEMENT genre_title (#PCDATA)>
+<!ELEMENT Genre (Genre_type,Album+, show+)>  <!--  The show element can repeat multiple times-->
+<!ELEMENT Genre_type (#PCDATA)>
+<!ELEMENT Album (album_cover,album_name,artist,band_genre,
+member_no,director?,producer,vocal+,Guitar?,Durm?,Bass?,record_studio?,  
+release_year,award?,rating?,songTrack,Track+,price,buy,discount?)> <!-- The director, guitar, durm, bass, record_studio, award, rating and dicount is optional element | track element can occur multiple times-->
+<!ELEMENT album_cover (#PCDATA)>
+<!ELEMENT album_name (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT band_genre (#PCDATA)>
+<!ELEMENT member_no (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT producer (#PCDATA)>
+<!ELEMENT vocal (#PCDATA)>
+<!ELEMENT Guitar (#PCDATA)>
+<!ELEMENT Durm (#PCDATA)>
+<!ELEMENT Bass (#PCDATA)>
+<!ELEMENT record_studio (#PCDATA)>
+<!ELEMENT release_year (#PCDATA)>
+<!ELEMENT award (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT songTrack (#PCDATA)>
+<!ELEMENT Track (song_name,writer,song_length)>  <!-- The track element is parent element for song_name, writer and song_length elements-->
+<!ELEMENT song_name (#PCDATA)>
+<!ELEMENT writer (#PCDATA)>
+<!ELEMENT song_length (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT buy (#PCDATA)>
+<!ELEMENT discount (#PCDATA)>
+<!ELEMENT show (#PCDATA)>
+<!ELEMENT footer (copyright,media_link)>   <!-- For footer part | footer element is parent element for copyright and medialink-->
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT media_link (follow_us)>
+<!ELEMENT follow_us (#PCDATA|social_media_fb|social_media_insta)*>  <!-- The follow_us is Mixed type element-->
+<!ELEMENT social_media_fb EMPTY>
+<!ELEMENT social_media_insta EMPTY>
+
+<!ATTLIST music_shop xmlns:xsi CDATA #REQUIRED>      <!-- For Attributes-->
+<!ATTLIST music_shop xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+<!ATTLIST address_country country  CDATA #FIXED "Nepal">   <!-- The country name is Fixed -->
+<!ATTLIST Genre GID ID #REQUIRED>   <!-- The Genre has ID -->
+<!ATTLIST Album AID ID #REQUIRED>   <!-- The Album has ID -->
+<!ATTLIST album_cover ACID ID #REQUIRED> 
+<!ATTLIST band_genre genre_band CDATA #REQUIRED>
+<!ATTLIST member_no number CDATA #REQUIRED>
+<!ATTLIST Track track_number CDATA #REQUIRED>
+<!ATTLIST rating stars CDATA #IMPLIED>  <!-- The rating is optional attribute-->
+<!ATTLIST song_length length CDATA #REQUIRED> 

@@ -1,0 +1,418 @@
+*{  
+	padding: 0;
+	margin: 0;
+}      /* This sets the margin and padding to 0 of whole website which dont show gap between pics and browser wall */
+
+music_shop{   /* parent element*/
+	background:url(images/background.jpg); /*  setting background image*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+shop_detail{ /* child element shop_detail*/
+	display: flex;
+	width: 80%;
+	height: 500px;
+	color: rgb(0, 0, 0);
+	text-align: centre; /* brings texts to centre*/
+	margin: 130px;
+}
+
+store_name{ /* for store name */
+	display: flex;
+	font-family:pitch;
+	letter-spacing: 13px;
+    font-size: 70px;
+	text-transform: uppercase;  /* change text to uppercase */
+    padding: 5px; 
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+	text-shadow: 0 0 8px #ff1dce, 0 0 8px #ff1dce,   /* shadow effect | it brings glow effect to text*/
+		 0 0 5px #ff1dce, 0 0 10px #ff1dce,
+		 0 0 10px #ff1dce;
+	position: absolute;
+	top: 28%;
+	left: 28%;
+	 
+}
+logo{ /* Putting logo */
+    content: url(images/logo.png);
+    width:200px;
+    height:150px;
+	background-size: 20%;
+	top: 6%;
+	left: 43%;
+	position: absolute;
+}
+
+address,telephone_number,website,email,Quote{  /* applying CSS together for thosee elements | they are text*/
+	font-family:'Dosis', Arial, sans-serif;
+	letter-spacing: 5px;
+    font-size: 20px;
+    padding: 5px; 
+    color: rgb(255, 255, 255);
+	text-shadow: 0 0 8px #ff1dce, 0 0 8px #ff1dce,
+		 0 0 5px #ff1dce, 0 0 10px #ff1dce,
+		 0 0 10px #ff1dce;
+
+    margin-bottom: 20px;
+	position: absolute;
+	top: 40%;
+	left: 43%;	 
+}
+
+
+
+telephone_number{  /* sperate CSS for position adjustment */
+	position: absolute;
+	top: 45%;
+	left: 45%;
+}
+
+website{ /* for website name*/
+	position: absolute;
+	top: 50%;
+	left: 41%;
+	 
+}
+
+Quote { /*  for website quote */
+
+	position: absolute;
+	top: 60%;
+	left: 33%;
+}
+
+genre_title{ /* The title of genre */
+	font-size: 60px;
+	color: cornsilk;
+	text-shadow: 0 0 8px #ff1dce, 0 0 8px #ff1dce,
+		 0 0 5px #ff1dce, 0 0 10px #ff1dce,
+		 0 0 10px #ff1dce;
+    margin-bottom: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for genre title */
+	position: absolute;
+	top:780px;
+	left: 50%
+}
+
+
+Genre[GID='G1']{  /* for genre rock */
+	display:flex;
+	background:linear-gradient(#3f5efb,#ff4d71);   /* this brings the gradient effect in the website*/
+	width:100%;
+    height:1000px;
+	margin-top: 8%;
+}
+
+Genre[GID='G2']{ /* for genre pop */
+	display:flex;
+	background:linear-gradient(#ff4d71,#3f5efb);
+	width: 100%;
+    height:900px;
+	margin-right: 40%;
+
+}
+
+Genre_type{ 
+	font-size: 40px;
+	color: cornsilk;
+	text-shadow: 0 0 8px #2010fa, 0 0 8px #2010fa,
+		 0 0 5px #2010fa, 0 0 10px #2010fa,
+		 0 0 10px #2010fa;
+	margin-top: 30%;
+}
+
+show{  /* CSS for text show more | to see more albums */
+	font-size: 20px;
+	color: cornsilk;
+	text-shadow: 0 0 8px #2010fa, 0 0 8px #2010fa,
+		 0 0 5px #2010fa, 0 0 10px #2010fa,
+		 0 0 10px #2010fa;
+	margin-top: 30%;
+	margin-left: 30px;
+
+}
+
+Album[AID='A1']{ /* CSS for album 1 of genre 1*/
+	display: flex;
+	background: rgba(143, 149, 156, 0.6);  /* This creates the translucent background and text are more clear*/
+	width: 600px;
+	margin-top: 10%;
+	margin-left: 5%;
+	border: 2px solid black;
+	box-shadow: 0 0 20px 2px rgba(51, 255, 0, 1);  /* This creates the border glow effect*/
+	display:inline;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: rgb(0, 0, 0);
+}
+
+Album[AID='A2']{
+	display: flex;
+	background: rgba(143, 149, 156, 0.6);  /* This creates the translucent background and text are more clear*/
+	width: 600px;
+	margin-top: 10%;
+	margin-left: 5%;
+	border: 2px solid black;
+	box-shadow: 0 0 20px 2px rgb(251, 255, 5,1);   /* This creates the border glow effect*/
+	display: inline;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: rgb(0, 0, 0);
+}
+
+Album[AID='A3']{
+	display: flex;
+	background: rgba(143, 149, 156, 0.6);  /* This creates the translucent background and text are more clear*/
+	width: 600px;
+	margin-top: 10%;
+	margin-left: 5%;
+	border: 2px solid black;
+	box-shadow: 0 0 20px 2px rgb(251, 255, 5,1);
+	display:inline;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	color: rgb(0, 0, 0);
+}
+
+Album[AID='A4']{
+	display: flex;
+	background: rgba(143, 149, 156, 0.6);  /* This creates the translucent background and text are more clear*/
+	width: 600px;
+	margin-top: 10%;
+	margin-left: 5%;
+	border: 2px solid black;
+	box-shadow: 0 0 20px 2px rgba(51, 255, 0, 1);
+	display: inline;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+album_name{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 22px;
+	font-weight:bold ;
+	text-align: center;
+	margin-top: 12px;
+}
+
+artist{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+member_no{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+director{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+producer{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+vocal{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+Guitar{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+Durm{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+
+Bass{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+record_studio{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+release_year{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+award{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+song_name{  /* The single element CSS for more control on position , font , bold etc*/
+	font-weight: bold;
+	display:list-item;
+	list-style-type:circle;
+	list-style-position: inside;
+	text-align: center;
+	margin-bottom: 3px;
+}
+
+writer{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+price{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+buy{  /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+discount{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+songTrack{ /* The single element CSS for more control on position , font , bold etc*/
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 12px;
+	margin-bottom: 5px;
+}
+
+album_cover[ACID='AC1']{    /* CSS for album cover*/
+	width: 200px;
+	height: 200px;
+	display: block;    
+	background-image: url(images/bohemian.jfif);
+	border-radius: 50%;    /* This makes the image circle shape */
+	margin-left: 33%;
+	margin-top: 5%;
+}
+
+album_cover[ACID='AC2']{   /* CSS for album cover*/
+	width: 200px;
+	height: 200px;
+	display: block;
+	background-image: url(images/beatles.jfif);   /* Picture link */
+	border-radius: 50%;
+	margin-left: 33%;
+	margin-top: 5%;
+}
+
+album_cover[ACID='AC3']{  /* CSS for album cover*/
+	width: 200px;
+	height: 200px;
+	display: block;
+	background-image: url(images/oneDirection.jpg);
+	border-radius: 50%;
+	margin-left: 33%;
+	margin-top: 5%;
+
+}
+
+album_cover[ACID='AC4']{  /* CSS for album cover*/
+	width: 200px;
+	height: 200px;
+	display: block;
+	background-image: url(images/fifthHarmony.jfif);
+	border-radius: 50%;
+	margin-left: 33%;
+	margin-top: 5%;
+
+}
+
+
+footer{   /* CSS for fotter section */
+	display: block;
+	background: linear-gradient(#a43edf,#5626c7); /* Gradent background colour */
+	width:100%;
+    height:100px;
+}
+
+
+
+copyright{  /* CSS copyright fontr*/
+	color: aliceblue;
+	margin-left: 15px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+media_link{  /* creating block for social media links */
+	display: block;
+	float: right;
+	width: 7%;
+	height: 100%;
+
+}
+
+follow_us{ /* CSS for follow us */
+	color: aliceblue;
+	display: block;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-left: 20px;
+}
+
+social_media_fb{  /* CSS for facebook picture*/
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	background-image: url(images/facebook.jfif);
+	margin-top: 10px;
+}
+
+social_media_insta{ /* CSS for instagram picture*/
+	display: inline-flex;
+	float: right;  /* shows images in right section of block*/
+	width: 40px;
+	height: 40px;
+	background-image: url(images/instagram.png);
+	margin-top: 10px;
+}
+album_cover:hover{
+    transform: scale(1.1);  /* Increase album cover image while hovering */
+
+}
+logo:hover{
+    transform: scale(1.1); /* Increase logo cover image while hovering */
+}
+
+

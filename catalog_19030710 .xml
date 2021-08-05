@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<?xml-stylesheet type="text/css" href="catalog_19030710.css"?>   <!-- Linking external CSS-->
+ <!DOCTYPE music_shop SYSTEM "catalog_19030710.dtd">     <!-- Linking external DTD-->
+<music_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:noNamespaceSchemaLocation="catalog_19030710.xsd">   <!-- Linking XSD-->
+
+	<shop_detail>  <!-- Child Element of parent element-->
+		<store_name>Wonder Rock</store_name>
+		<address>Kapan,Kathmandu</address>
+		<address_country country='Nepal'/>   <!-- attribute to store country name-->
+		<telephone_number>0112345678</telephone_number>
+		<website>www.wonderrock.com</website>
+		<logo></logo>    <!-- Empty element to hold logo image-->
+		<Quote>Without music, life would be a mistake</Quote>
+	</shop_detail>
+	
+	<songs>    <!-- Child Element of parent element-->
+		<genre_title>Songs</genre_title>
+		<Genre GID='G1'>   <!-- ID for genre | Genre can repeat and to work with different genre, id is given-->
+			<Genre_type>Genre:Rock</Genre_type>
+
+			<Album AID='A1'>  <!--ID for Album | Genre can repeat and to work with different album, id is given -->
+				<album_cover ACID='AC1'></album_cover>
+				<album_name>Album: A Night at the Opera</album_name>   <!-- The album name-->
+				<artist>Band: Queen</artist>
+				<band_genre genre_band="Hard Rock"></band_genre>  <!-- band genre -->
+				<member_no number='4'></member_no> <!-- The band members number is stored in attribute -->
+				<director>Director: Brain May</director>  <!--  This is an optional element-->
+				<producer>Producer: Roy Thomas Baker</producer>
+				<vocal>Lead Vocal: Freddie Mercury</vocal>    <!-- The vocal element can repeat multiple time but should compulsary once it should present-->
+				<Guitar>Guitarist: Brain May</Guitar> <!-- The guitar is optional element -->
+				<Durm>Drummer: Roger Taylor</Durm> <!-- The durm is an optional element-->
+				<Bass>Bassist: John Deacon</Bass> <!-- The durm is an optional element -->
+				<record_studio>Recording studio: The Quadrangle studio</record_studio>
+				<release_year>Released year: 1975</release_year>
+				<award>Award: Grammy award 1976</award>
+				<rating stars='4.5'/>  <!-- It is optional attribute to store rating of album -->
+				<songTrack>Tracks:2</songTrack>
+				<Track track_number="1"> <!-- This element is for single songs in album -->
+					<song_name>Bohemian Rhapsody</song_name>
+					<writer>Lyrics: Freddie Mercury</writer>
+					<song_length length="6:00"/>  
+				</Track>
+
+				<Track track_number="2">  <!-- The element for song 2 in album-->
+					<song_name>You are my best Friend</song_name>  <!-- The name of song -->
+					<writer>Lyrics: John Decon</writer>
+					<song_length length="3:08"/>
+				</Track>
+				<price>Price:Rs:500</price>
+				<buy>Buy now</buy>   
+				<discount>Discount 20%</discount>
+			</Album>  <!-- End of Album 1 -->
+
+			<Album AID='A2'>   <!-- Album 2 start-->
+				<album_cover ACID='AC2'></album_cover>  <!-- The ID for album cover -->
+				<album_name>Album: Hotel California</album_name>
+				<artist>Band: The Eagles</artist>
+				<band_genre genre_band="Country Rock"></band_genre>
+				<member_no number='5'></member_no>  <!-- The band has 5 members -->
+				<director>Director: Delton Brown</director>
+				<producer>Producer: Bill Szymcyk</producer>
+				<vocal>Vocal: Glenn Frey</vocal>
+				<Guitar>Guitar: Bernie Leadon</Guitar>
+				<Durm>Durm: Don Henley</Durm>
+				<Bass>Bass: Randy Meisner</Bass>
+				<release_year>Release year: 1976</release_year>
+				<award>Award: Grammy award 1977</award>    <!-- no recording studio here because recording_studio is an optional element-->
+				<rating stars="4"/>
+				<songTrack>Tracks:2</songTrack>   <!-- This album has 2 songs-->
+				<Track track_number="1">
+					<song_name>Hotel California</song_name>
+					<writer>Lyrics: Don Henley</writer>
+					<song_length length="6:00"/>
+				</Track>
+
+				<Track track_number="2">  <!-- Element for second song in album -->
+					<song_name>The Long Run</song_name>
+					<writer>Lyrics: Glenn Frey</writer>
+					<song_length length="6:31"/>
+				</Track>
+				<price>Price: Rs:450</price>
+				<buy>Buy now</buy>
+				<discount>Discount 25%</discount>
+			</Album>
+
+			<show>Show More</show>  <!-- This is to see more albums-->
+		</Genre>
+
+		<Genre GID='G2'>  <!-- Starting of send genre that is pop-->
+			<Genre_type>Genre:Pop</Genre_type>
+			<Album AID='A3'> 
+				<album_cover ACID='AC3'></album_cover>
+				<album_name>Album: Take me home</album_name>
+				<artist>Band: One Direction</artist>
+				<band_genre genre_band="Pop rock"></band_genre>
+				<member_no number='5'></member_no>
+				<producer>Producer: Roy Thomas Baker</producer>
+				<vocal>Vocal: Harry Styles</vocal>  <!-- Multiple vocal elements  -->
+				<vocal>Vocal: Zyan Malik</vocal>
+				<vocal>Vocal: Niall Horen</vocal>
+				<vocal>Vocal: Louis Tomlinson</vocal>
+				<vocal>Vocal: Liam Payne</vocal>
+				<release_year>Release year: 2013</release_year>
+				<songTrack>Tracks:2</songTrack>
+				<Track track_number="1">  <!-- for song 1 in album -->
+					<song_name>Live while we are young</song_name>
+					<writer>Lyrics: Mick Jones</writer>
+					<song_length length="3:18"/>
+				</Track>
+
+				<Track track_number="2">  <!-- for song 2 in album-->
+					<song_name>Little Things</song_name>
+					<writer>Lyrics: Ed Sheeran</writer>
+					<song_length length="3:18"/>
+				</Track>
+				<price>Price: Rs:500</price>
+				<buy>Buy now</buy>
+
+			</Album>
+			<Album AID='A4'>  <!-- Starting of album 4-->
+				<album_cover ACID='AC4'></album_cover>
+				<album_name>Album: Reflection</album_name>
+				<artist>Artist: Fifth Harmony</artist>
+				<band_genre genre_band="Electro pop"></band_genre>
+				<member_no number='5'></member_no>
+				<director>Director: Cameron Duddy</director>
+				<producer>Producer: Tyrone Griffin</producer>
+				<vocal>Vocal: Dinah Jane</vocal>  <!-- Here are multiple vocal elements because vocal can repeat-->
+				<vocal>Vocal: Ally Brooke</vocal>
+				<vocal>Vocal: Camila Cabello</vocal>
+				<vocal>Vocal: Lauren Jauregui</vocal>
+				<vocal>Vocal: Normani Hamilton</vocal>			
+				<release_year>Release year: 2015</release_year>
+				<songTrack>Tracks:2</songTrack>  <!-- This album has 2 songs-->
+				<Track track_number="1"> <!-- For song 1-->
+					<song_name>Going Nowhere</song_name>
+					<writer>Lyrics: Ally Brooke</writer>
+					<song_length length="3:27"/>
+				</Track>
+
+				<Track track_number="2">  <!-- For song 2-->
+					<song_name>We Know</song_name>
+					<writer>Lyrics: Ally Brooke</writer>
+					<song_length length="2:56"/>
+				</Track>
+				<price>Price: Rs:500</price>
+				<buy>Buy now</buy>
+			</Album> <!-- Album 4 end -->
+
+			<show>Show More</show>  <!-- This is used to see the more albums -->
+		</Genre>
+	</songs>
+
+	<footer>  <!-- Child Element of parent element-->
+		<copyright> &#169; Wonder Rock 2021</copyright>   <!--&#169; is character reference for copyright  -->
+		<media_link> 
+			<follow_us>Follow us    <!-- This is a mixed type element -->
+				<social_media_fb></social_media_fb> <!-- These elements holds the social media icon -->
+				<social_media_insta></social_media_insta>
+			</follow_us>
+	    </media_link>
+	</footer>
+</music_shop>

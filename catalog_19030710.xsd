@@ -1,0 +1,199 @@
+<?xml version="1.0"?>               <!-- This is venetian Blinds design-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- root element music_shop -->
+    <!-- music_shop | The is a complex type element | it contains child elements (shop_details, songs and footer ) -->  
+    <xs:element name="music_shop">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="shop_detail"/>  
+            <xs:element ref="songs"/>  
+            <xs:element ref="footer"/>        
+        </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+    
+    <!-- complex elements-->
+    <!-- shop detail| The shop_detail is a complex type element | it contains store_name, address, address_country, telephone_number, website, logo and quote as child element-->
+    <xs:element name="shop_detail">
+        <xs:complexType>
+        <xs:sequence>
+                <xs:element ref="store_name"/>    <!-- referencing simple type element  -->
+                <xs:element ref="address"/>
+                <xs:element name="address_country"> 
+                    <xs:complexType>    
+                        <xs:attribute ref="country" use="required"/>        <!-- referencing attributes -->                
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="telephone_number"/>
+                <xs:element ref="website"/> 
+                <xs:element ref="logo"/>
+                <xs:element ref="Quote"/>
+        </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- songs -->
+    <!-- Album | The Album is a complex type element| It has genre_titlevand Genre as child elements -->  
+    <xs:element name="songs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="genre_title"/>
+                <xs:element ref="Genre" maxOccurs="unbounded"/> <!-- Genre can occur multiple times-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Genre -->
+    <!-- Genre | The Genre is a complex type element | It has Genre_type, Album  and show as child element -->  
+    <xs:element name="Genre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Genre_type"/>
+                <xs:element ref="Album" maxOccurs="unbounded"/>  <!-- Album can occur multiple times-->
+                <xs:element ref="show"/>
+            </xs:sequence>
+            <xs:attribute ref="GID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Album | The Album is a complex type element | It has child elements -->  
+    <xs:element name="Album">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="album_cover">
+                    <xs:complexType>
+                        <xs:attribute ref="ACID" use="required"/>                       
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="album_name"/>
+                <xs:element ref="artist"/>
+                <xs:element name="band_genre">
+                    <xs:complexType>     <!-- complex type element-->
+                        <xs:attribute ref="genre_band" use="required"/>                       
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="member_no">
+                    <xs:complexType>
+                        <xs:attribute ref="number" use="required"/>                       
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="director" minOccurs="0"/>
+                <xs:element ref="producer"/>
+                <xs:element ref="vocal" maxOccurs="unbounded"/>
+                <xs:element ref="Guitar" minOccurs="0"/>
+                <xs:element ref="Durm" minOccurs="0"/>
+                <xs:element ref="Bass" minOccurs="0"/>
+                <xs:element ref="record_studio"  minOccurs="0"/>
+                <xs:element ref="release_year"/>
+                <xs:element ref="award" minOccurs="0"/>
+                <xs:element name="rating" minOccurs="0">
+                    <xs:complexType>
+                        <xs:attribute ref="stars" use="required"/>                       
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="songTrack"/>
+                <xs:element ref="Track" maxOccurs="unbounded"/>
+                <xs:element ref="price"/>
+                <xs:element ref="buy"/>
+                <xs:element ref="discount" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute ref="AID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+        <!-- Track | The Track is a complex type element | it contains child elements song_name, writer, song_length, track_number -->
+        <xs:element name="Track">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="song_name"/>
+                    <xs:element ref="writer"/>
+                    <xs:element name="song_length">
+                        <xs:complexType>
+                            <xs:attribute ref="length" use="required"/>        <!-- refrencing attribute -->                
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute ref="track_number" use="required"/>
+            </xs:complexType>
+        </xs:element>
+ 
+    <!-- footer -->
+    <!-- The footer is a complex type element | It has copyright and media_link as child element-->  
+    <xs:element name="footer">
+        <xs:complexType>
+            <xs:sequence>       
+                <xs:element ref="copyright"/>
+                <xs:element ref="media_link"/>      
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <!-- follow_us -->
+    <!-- follow_us | This is a complex type element -->  
+    <xs:element name="follow_us">  
+    <xs:complexType mixed="true">   <!-- Mixed Type element-->
+        <xs:sequence>
+        <xs:element ref="social_media_fb" />
+        <xs:element ref="social_media_insta" />
+        </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+
+    <!-- media_link -->
+    <!-- media_link | This is a complex type element -->  
+    <xs:element name="media_link">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="follow_us" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>    
+    
+
+    <!-- These are simple type elements-->
+    <xs:element name="store_name" type="xs:string"/>  <!-- xs:string means this element can only have string datatype-->
+    <xs:element name="address" type="xs:string"/> 
+    <xs:element name="telephone_number" type="xs:int"/>   <!-- xs:string means this element can only have int datatype-->
+    <xs:element name="website" type="xs:anyURI"/>   <!-- xs:anyURI means this element can have website links-->
+    <xs:element name="logo" type="xs:string"/>
+    <xs:element name="Quote" type="xs:string"/>
+    <xs:element name="genre_title" type="xs:string"/>
+    <xs:element name="Genre_type" type="xs:string"/>
+    <xs:element name="album_name" type="xs:string"/>
+    <xs:element name="artist" type="xs:string"/>
+    <xs:element name="song_length" type="xs:string"/>
+    <xs:element name="director" type="xs:string"/>
+    <xs:element name="producer" type="xs:string"/>
+    <xs:element name="vocal" type="xs:string"/>
+    <xs:element name="Guitar" type="xs:string"/>
+    <xs:element name="Durm" type="xs:string"/>   
+    <xs:element name="Bass" type="xs:string"/>
+    <xs:element name="record_studio" type="xs:string"/>
+    <xs:element name="release_year" type="xs:string"/>
+    <xs:element name="award" type="xs:string"/>   
+    <xs:element name="songTrack" type="xs:string"/> 
+    <xs:element name="song_name" type="xs:string"/>  
+    <xs:element name="writer" type="xs:string"/>       
+    <xs:element name="price" type="xs:string"/>
+    <xs:element name="buy" type="xs:string"/>
+    <xs:element name="discount" type="xs:string"/>       
+    <xs:element name="show" type="xs:string"/>
+    <xs:element name="copyright" type="xs:string"/>    
+    <xs:element name="social_media_fb" type="xs:string"/>
+    <xs:element name="social_media_insta" type="xs:string"/>
+        
+
+    <!-- defining   for attributes-->
+    <xs:attribute type="xs:string" name="country"/>   
+    <xs:attribute type="xs:string" name="GID" />
+    <xs:attribute type="xs:string" name="AID" />
+    <xs:attribute type="xs:string" name="ACID" />
+    <xs:attribute type="xs:string" name="genre_band" />
+    <xs:attribute type="xs:byte" name="number" />
+    <xs:attribute type="xs:float" name="stars" />
+    <xs:attribute type="xs:byte" name="track_number" />
+    <xs:attribute type="xs:string" name="length" />
+</xs:schema>
